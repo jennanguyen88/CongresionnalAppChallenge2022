@@ -1,0 +1,104 @@
+//HOMEPAGE BUTTONS
+onEvent("diaryButton", "click", function( ) {
+  setScreen("diaryPage");
+});
+
+onEvent("resourcesButton", "click", function( ) {
+  setScreen("resourcesPage");
+});
+
+onEvent("checklistButton", "click", function( ) {
+  setScreen("checkListPage");
+});
+
+onEvent("informationButton", "click", function( ) {
+  setScreen("informationPage");
+});
+//BACK/NEXT BUTTONS
+onEvent("backtoHomefromDiary", "click", function( ) {
+  setScreen("homePage");
+});
+onEvent("backtoHomefromInformation", "click", function( ) {
+  setScreen("homePage");
+});
+onEvent("backtoHomefromResources", "click", function( ) {
+  setScreen("homePage");
+});
+onEvent("backtoHomefromChecklist", "click", function( ) {
+  setScreen("homePage");
+});
+onEvent("backtoHomefromRead", "click", function( ) {
+  setScreen("homePage");
+});
+onEvent("backtoResourcesfromRead", "click", function( ) {
+  setScreen("resourcesPage");
+});
+//CHECKLIST PAGE
+onEvent("ChecklistResetPopupButton", "click", function( ) {
+  showElement("ChecklistBlackBGroundPopup");
+  showElement("ChecklistResetAllButton");
+  showElement("ChecklistResetCheckBoxesButton");
+  showElement("ChecklistResetNevermindButton");
+});
+onEvent("ChecklistResetCheckBoxesButton", "click", function( ) {
+  setChecked("checkbox1", false);
+  setChecked("checkbox2", false);
+  setChecked("checkbox3", false);
+  setChecked("checkbox4", false);
+  setChecked("checkbox5", false);
+  hideElement("ChecklistBlackBGroundPopup");
+  hideElement("ChecklistResetAllButton");
+  hideElement("ChecklistResetCheckBoxesButton");
+  hideElement("ChecklistResetNevermindButton");
+});
+onEvent("ChecklistResetAllButton", "click", function( ) {
+  setChecked("checkbox1", false);
+  setChecked("checkbox2", false);
+  setChecked("checkbox3", false);
+  setChecked("checkbox4", false);
+  setChecked("checkbox5", false);
+  setText("Checklist_text_area1", "");
+  setText("Checklist_text_area2", "");
+  setText("Checklist_text_area3", "");
+  setText("Checklist_text_area4", "");
+  setText("Checklist_text_area5", "");
+  hideElement("ChecklistBlackBGroundPopup");
+  hideElement("ChecklistResetAllButton");
+  hideElement("ChecklistResetCheckBoxesButton");
+  hideElement("ChecklistResetNevermindButton");
+});
+onEvent("ChecklistResetNevermindButton", "click", function( ) {
+  hideElement("ChecklistBlackBGroundPopup");
+  hideElement("ChecklistResetAllButton");
+  hideElement("ChecklistResetCheckBoxesButton");
+  hideElement("ChecklistResetNevermindButton");
+});
+//DIARY PAGE
+//RESOURCES PAGE
+onEvent("resource1Hotlines", "click", function( ) {
+  open("https://www.pleaselive.org/hotlines/");
+});
+onEvent("resource2Psychologistsnear", "click", function( ) {
+  open("https://www.google.com/maps/search/psychologist+near+me/@27.8619017,-82.7326779,14z/data=!3m1!4b1");
+});
+onEvent("resource3VideosButton", "click", function( ) {
+  open("https://www.youtube.com/watch?v=hmFQqjMF_f0&list=PLY8sEFNG3aIPowcdiBpRSpZ9eipLyjG9J&index=1");
+});
+onEvent("resources4ReadButton", "click", function( ) {
+  setScreen("readPage");
+});
+
+//READ PAGE
+onEvent("readHealthyDietButton", "click", function( ) {
+  open("https://www.who.int/news-room/fact-sheets/detail/healthy-diet");
+});
+onEvent("readSleepButton", "click", function( ) {
+  open("https://www.health.harvard.edu/womens-health/in-search-of-sleep");
+});
+onEvent("readMeditationButton", "click", function( ) {
+  open("https://www.healthline.com/nutrition/12-benefits-of-meditation");
+});
+onEvent("readPhysicalActivityButton", "click", function( ) {
+  open("https://www.who.int/news-room/fact-sheets/detail/physical-activity");
+});
+
